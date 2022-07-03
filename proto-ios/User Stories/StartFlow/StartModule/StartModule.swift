@@ -7,7 +7,8 @@
 
 import Foundation
 
-class StartModule: DefaultModule {
+final class StartModule: DefaultModule {
+    
     init() {
         super.init {
             return StartLogic()

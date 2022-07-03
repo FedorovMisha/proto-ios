@@ -7,14 +7,11 @@
 
 import Foundation
 
-class StartLogic: ViewLogic, ViewContainer, StartOutputProtocol {
-    func fetch() {
-        view?.changeBackgroundColor()
-    }
+class StartLogic: ViewLogic, ViewContainer, StartLogicOutput {
     
-    weak var view: StartViewController?
-
-    func activate() {
-        fetch()
+    weak var view: StartViewInput?
+    
+    func fetch() {
+        view?.changeBackgroundColor(color: .blue)
     }
 }

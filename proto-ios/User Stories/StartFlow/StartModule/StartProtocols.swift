@@ -5,12 +5,12 @@
 //  Created by Misha Fedorov on 03.07.2022.
 //
 
-import Foundation
+import UIKit
 
-protocol StartInputProtocol {
-    func changeBackgroundColor()
+protocol StartLogicOutput {
+    func fetch()
 }
 
-protocol StartOutputProtocol {
-    func fetch()
+protocol StartViewInput: AnyObject {
+    func changeBackgroundColor(color: UIColor)
 }
