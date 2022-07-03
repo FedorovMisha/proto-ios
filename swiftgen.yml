@@ -1,0 +1,27 @@
+input_dir: ./proto-ios/Resources/
+output_dir: ./proto-ios/Resources/Generated/
+
+xcassets:
+  - inputs: Colors.xcassets
+    outputs:
+      - templatePath: ./proto-ios/Resources/SwiftGenTemplates/UIColor.stencil
+        output: Colors.swift
+        params:
+          enumName: UIColor
+          publicAccess: true
+          allValues: true
+  - inputs: Images.xcassets
+    outputs:
+      templatePath: ./proto-ios/Resources/SwiftGenTemplates/UIImage.stencil
+      output: Images.swift
+      params:
+          publicAccess: true
+          allValues: true
+        
+strings:
+  inputs: Localizable/en.lproj
+  outputs:
+    templateName: structured-swift5
+    output: Localizable.swift
+
+

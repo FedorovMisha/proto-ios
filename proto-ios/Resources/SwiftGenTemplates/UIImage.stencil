@@ -1,0 +1,57 @@
+// swiftlint:disable all
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
+
+{% if catalogs %}
+{% set imageAlias %}{{param.imageAliasName|default:"AssetImageTypeAlias"}}{% endset %}
+{% set accessModifier %}{% if param.publicAccess %}public{% else %}internal{% endif %}{% endset %}
+#if os(OSX)
+  import AppKit.NSImage
+  {{accessModifier}} typealias {{imageAlias}} = NSImage
+#elseif os(iOS) || os(tvOS) || os(watchOS)
+  import UIKit.UIImage
+  {{accessModifier}} typealias {{imageAlias}} = UIImage
+#endif
+
+// swiftlint:disable superfluous_disable_command
+// swiftlint:disable file_length
+
+// MARK: - Asset Catalogs
+
+{% macro enumBlock assets %}
+  {% call casesBlock assets %}
+{% endmacro %}
+{% macro casesBlock assets %}
+  {% for asset in assets %}
+  {% if asset.type == "image" %}
+  static var {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}: {{imageAlias}} { UIImage(named: "{{asset.value}}", in: _bundle, compatibleWith: nil)! }
+  {% elif asset.items and ( forceNamespaces == "true" or asset.isNamespaced == "true" ) %}
+  {{accessModifier}} enum {{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+
+    {% filter indent:2 %}{% call casesBlock asset.items %}{% endfilter %}
+  }
+  {% elif asset.items %}
+  {% call casesBlock asset.items %}
+  {% endif %}
+  {% endfor %}
+{% endmacro %}
+
+// swiftlint:disable identifier_name line_length nesting type_body_length type_name
+{{accessModifier}} extension {{imageAlias}} {
+  private static let _bundle = Bundle(for: BundleToken.self)
+
+  {% if catalogs.count > 1 %}
+  {% for catalog in catalogs %}
+  {{accessModifier}} enum {{catalog.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+    {% filter indent:2 %}{% call enumBlock catalog.assets %}{% endfilter %}
+  }
+  {% endfor %}
+  {% else %}
+  {% call enumBlock catalogs.first.assets %}
+  {% endif %}
+}
+// swiftlint:enable identifier_name line_length nesting type_body_length type_name
+
+private final class BundleToken {}
+{% else %}
+// No assets found
+{% endif %}
