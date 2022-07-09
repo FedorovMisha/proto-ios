@@ -1,13 +1,13 @@
 //
-//  StartViewController.swift
+//  SecondViewController.swift
 //  proto-ios
 //
-//  Created by Misha Fedorov on 03.07.2022.
+//  Created by Мельник Дмитрий on 08.07.2022.
 //
 
-import UIKit
+import Foundation
 
-class StartViewController: UIViewController, LogicContainer, ViewInput, StartInputProtocol {
+class SecondViewController: UIViewController, LogicContainer, ViewInput, StartInputProtocol {
 
     var logic: StartOutputProtocol!
     ///
@@ -18,17 +18,15 @@ class StartViewController: UIViewController, LogicContainer, ViewInput, StartInp
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
+        view.backgroundColor = .systemGreen
         view.addFullSizeView(tableView)
         tableViewDataProvider.sections = [SectionDescriptor(rows: [
             CellDescriptor(configuration: {
                 cell in
                 
-                cell.backgroundColor = .red
+                cell.backgroundColor = .systemRed
             })
         ])]
-        /// some button action
-        coordinator?.secondVC()
     }
     
     func changeBackgroundColor() {
