@@ -42,9 +42,8 @@
 		4BA368E3287044B100D2256D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA368E2287044B100D2256D /* AppDelegate.swift */; };
 		4BA368EC287044B400D2256D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA368EB287044B400D2256D /* Assets.xcassets */; };
 		4BA368EF287044B400D2256D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA368ED287044B400D2256D /* LaunchScreen.storyboard */; };
-		A8051CD828789AE10098B29D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8051CD728789AE10098B29D /* SecondViewController.swift */; };
-		A8051CDA28789B0C0098B29D /* SecondModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8051CD928789B0C0098B29D /* SecondModule.swift */; };
-		A8051CDC28789B3D0098B29D /* SecondLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8051CDB28789B3D0098B29D /* SecondLogic.swift */; };
+		A8E2622D287AF91E009E86B7 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E2622C287AF91E009E86B7 /* MainCoordinator.swift */; };
+		A8E2622F287C0FD9009E86B7 /* FlowCoordinatorsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E2622E287C0FD9009E86B7 /* FlowCoordinatorsProtocols.swift */; };
 		CAEB4F10203700F307F0494C /* Pods_proto_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E2635AB051C5E56C03F078 /* Pods_proto_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,9 +89,8 @@
 		4BA368EB287044B400D2256D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BA368F0287044B400D2256D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D83E40919574B7FCC48710E /* Pods-proto-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proto-ios.debug.xcconfig"; path = "Target Support Files/Pods-proto-ios/Pods-proto-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		A8051CD728789AE10098B29D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		A8051CD928789B0C0098B29D /* SecondModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModule.swift; sourceTree = "<group>"; };
-		A8051CDB28789B3D0098B29D /* SecondLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondLogic.swift; sourceTree = "<group>"; };
+		A8E2622C287AF91E009E86B7 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		A8E2622E287C0FD9009E86B7 /* FlowCoordinatorsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinatorsProtocols.swift; sourceTree = "<group>"; };
 		D1E2635AB051C5E56C03F078 /* Pods_proto_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_proto_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -165,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				4B8BECB52870B5410081CAFF /* Cordinator.swift */,
+				A8E2622E287C0FD9009E86B7 /* FlowCoordinatorsProtocols.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -184,6 +183,7 @@
 			children = (
 				4B8BECDD2870EDAB0081CAFF /* StartModule */,
 				4B8BECE62871E57E0081CAFF /* StartCoordinator.swift */,
+				A8E2622C287AF91E009E86B7 /* MainCoordinator.swift */,
 			);
 			path = StartFlow;
 			sourceTree = "<group>";
@@ -194,9 +194,6 @@
 				4B8BECDE2870EDB40081CAFF /* StartModule.swift */,
 				4B8BECE02870EDBB0081CAFF /* StartViewController.swift */,
 				4B8BECE22870EDC60081CAFF /* StartLogic.swift */,
-				A8051CD728789AE10098B29D /* SecondViewController.swift */,
-				A8051CD928789B0C0098B29D /* SecondModule.swift */,
-				A8051CDB28789B3D0098B29D /* SecondLogic.swift */,
 				4B8BECE42870EDCF0081CAFF /* StartProtocols.swift */,
 			);
 			path = StartModule;
@@ -468,11 +465,9 @@
 				4B8BECE92871F39E0081CAFF /* ViewController.swift in Sources */,
 				4B8BECC42870BF770081CAFF /* View.swift in Sources */,
 				4B8BECDF2870EDB40081CAFF /* StartModule.swift in Sources */,
-				A8051CD828789AE10098B29D /* SecondViewController.swift in Sources */,
 				4B8BECF62871FC410081CAFF /* TableViewDataProvider+UITableViewDelegate.swift in Sources */,
 				4B8BECD82870E17C0081CAFF /* ViewInput.swift in Sources */,
 				4B8BEC9A2870A5AC0081CAFF /* Localizable.swift in Sources */,
-				A8051CDA28789B0C0098B29D /* SecondModule.swift in Sources */,
 				4B8BECE12870EDBB0081CAFF /* StartViewController.swift in Sources */,
 				4B8BECD62870E1760081CAFF /* Module.swift in Sources */,
 				4B8BECE72871E57E0081CAFF /* StartCoordinator.swift in Sources */,
@@ -481,12 +476,12 @@
 				4B8BECF22871F88B0081CAFF /* CellDescriptor.swift in Sources */,
 				4B8BECB62870B5410081CAFF /* Cordinator.swift in Sources */,
 				4B8BECF82871FD8C0081CAFF /* UITableView+Extensions.swift in Sources */,
+				A8E2622F287C0FD9009E86B7 /* FlowCoordinatorsProtocols.swift in Sources */,
 				4B8BEC9E2870A5B80081CAFF /* Images.swift in Sources */,
 				4B8BECF42871F8930081CAFF /* SectionDescriptor.swift in Sources */,
 				4B8BECDA2870E1860081CAFF /* ViewLogic.swift in Sources */,
 				4B8BECD02870DDEE0081CAFF /* Transition.swift in Sources */,
 				4B8BECE52870EDCF0081CAFF /* StartProtocols.swift in Sources */,
-				A8051CDC28789B3D0098B29D /* SecondLogic.swift in Sources */,
 				4B8BEC9C2870A5B10081CAFF /* Colors.swift in Sources */,
 				4B8BECD22870DECB0081CAFF /* ScreenTransition.swift in Sources */,
 				4B8BECFA287208600081CAFF /* .gitkeep.swift in Sources */,
@@ -494,6 +489,7 @@
 				4B8BECDC2870E1BD0081CAFF /* Typealias.swift in Sources */,
 				4B8BECEB2871F47A0081CAFF /* UIView+Extensions.swift in Sources */,
 				4BA368E3287044B100D2256D /* AppDelegate.swift in Sources */,
+				A8E2622D287AF91E009E86B7 /* MainCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

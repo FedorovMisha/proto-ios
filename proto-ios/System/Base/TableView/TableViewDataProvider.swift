@@ -24,4 +24,8 @@ class TableViewDataProvider: NSObject {
         self.tableView.delegate = self
         self.tableView.reloadData()
     }
+    
+    // create method to allow select a cell
+    // create method to allow select a cell
+
 }

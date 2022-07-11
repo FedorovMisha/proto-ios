@@ -7,11 +7,12 @@
 
 import UIKit
 
-class StartViewController: UIViewController, LogicContainer, ViewInput, StartInputProtocol {
+class StartViewController: UIViewController, LogicContainer, ViewInput, StartInputProtocol, StartCoordinatorProtocol {
+    
+    var coordinator: StartCoordinator?
+    
 
     var logic: StartOutputProtocol!
-    ///
-    weak var coordinator: StartCoordinator?
     
     var tableView = UITableView()
     lazy var tableViewDataProvider = TableViewDataProvider(tableView: tableView)
@@ -27,8 +28,7 @@ class StartViewController: UIViewController, LogicContainer, ViewInput, StartInp
                 cell.backgroundColor = .red
             })
         ])]
-        /// some button action
-        coordinator?.secondVC()
+       
     }
     
     func changeBackgroundColor() {
