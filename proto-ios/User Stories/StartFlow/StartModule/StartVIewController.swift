@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 final class StartViewController: UIViewController, ViewInput, LogicContainer, StartViewInput {
+    
+    
     func changeBackgroundColor(color: UIColor) {
         view.backgroundColor = color
     }
@@ -18,6 +20,7 @@ final class StartViewController: UIViewController, ViewInput, LogicContainer, St
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         logic.fetch()
     }

@@ -21,8 +21,11 @@ class CellDescriptor {
         self.reuseIdentifier = reuseIdentifier
         
         self.configuration = {
-            
             configuration($0 as! Cell)
         }
     }
+}
+
+var fu = CellDescriptor { Cell in
+    Cell.reuseIdentifier
 }
