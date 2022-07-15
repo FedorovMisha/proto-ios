@@ -32,4 +32,9 @@ class TableViewDataProvider: NSObject {
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return "Footer in \(section)"
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
 }

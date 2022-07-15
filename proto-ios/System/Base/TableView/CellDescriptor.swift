@@ -26,6 +26,4 @@ class CellDescriptor {
     }
 }
 
-var fu = CellDescriptor { Cell in
-    Cell.reuseIdentifier
-}
+
