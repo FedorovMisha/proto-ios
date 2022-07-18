@@ -11,11 +11,13 @@ class CellDescriptor {
     var cellClass: UITableViewCell.Type
     var reuseIdentifier: String
     var configuration: (UITableViewCell) -> Void
+    var selectedCell: VoidClosure?
     
     init<Cell: UITableViewCell>(
         configuration: @escaping (Cell) -> Void,
         isVisable: Bool = true,
-        reuseIdentifier: String = String(describing: type(of: Cell.self))
+        reuseIdentifier: String = String(describing: type(of: Cell.self)),
+        selectedCell: VoidClosure? = nil
     ) {
         cellClass = Cell.self
         self.reuseIdentifier = reuseIdentifier
@@ -26,4 +28,7 @@ class CellDescriptor {
     }
 }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes

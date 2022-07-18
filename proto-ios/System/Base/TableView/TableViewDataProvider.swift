@@ -24,6 +24,7 @@ class TableViewDataProvider: NSObject {
         self.tableView.delegate = self
         self.tableView.reloadData()
     }
+<<<<<<< Updated upstream
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Header in \(section)"
@@ -37,4 +38,6 @@ class TableViewDataProvider: NSObject {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         <#code#>
     }
+=======
+>>>>>>> Stashed changes
 }

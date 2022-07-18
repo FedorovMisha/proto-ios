@@ -18,10 +18,19 @@ final class StartViewController: UIViewController, ViewInput, LogicContainer, St
     
     var logic: StartLogicOutput!
     
+    var tableView = UITableView()
+    
+    lazy var tableViewDataProvider = TableViewDataProvider(tableView: tableView)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addFullSizeView(tableView)
         
+        tableViewDataProvider.sections = [SectionDescriptor.init(rows: [CellDescriptor.init(configuration: { Cell in
+            Cell.backgroundColor = .systemGreen
+        } )])]
         
         logic.fetch()
     }
 }
+
