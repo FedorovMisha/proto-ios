@@ -15,9 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let module = StartCoordinator()
-        window?.rootViewController = module.presenter
-        module.start()
+        window?.rootViewController = navigationController
+        let module = Example_StartModule(title: "This is start module")
+        let controller = module.build()
+        navigationController.pushViewController(controller, animated: true)
         window?.makeKeyAndVisible()
         return true
     }
