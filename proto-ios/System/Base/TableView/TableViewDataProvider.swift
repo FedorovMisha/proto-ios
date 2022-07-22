@@ -24,20 +24,4 @@ class TableViewDataProvider: NSObject {
         self.tableView.delegate = self
         self.tableView.reloadData()
     }
-<<<<<<< Updated upstream
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Header in \(section)"
-    }
-    
-    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return "Footer in \(section)"
-    }
-    
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
-    }
-=======
->>>>>>> Stashed changes
 }

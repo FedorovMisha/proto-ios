@@ -37,14 +37,10 @@ extension TableViewDataProvider: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Header \(section)"
+        return "Header in \(section)"
     }
     
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return "Footer \(section)"
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        sections[indexPath.row]
+        return "Footer in \(section)"
     }
 }
