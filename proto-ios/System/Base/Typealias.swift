@@ -8,4 +8,5 @@
 import Foundation
 
 typealias VoidClosure = () -> Void
-
+typealias ViewModelProvider<T: ViewModel> = () -> T
+typealias ViewProvider<T: ViewController & ViewModelContainer> = () -> T
