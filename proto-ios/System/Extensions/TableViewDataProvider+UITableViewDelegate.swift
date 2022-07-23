@@ -12,7 +12,7 @@ extension TableViewDataProvider: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sections = sections[indexPath.section]
         let row = sections.rows[indexPath.row]
-        row.selectedCell(self.UITableViewCell)
+        row.selectedCell?(UITableViewCell())
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

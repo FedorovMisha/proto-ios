@@ -17,9 +17,9 @@ class CellDescriptor {
         configuration: @escaping (Cell) -> Void,
         isVisable: Bool = true,
         reuseIdentifier: String = String(describing: type(of: Cell.self)),
-        selected: (() -> (Cell))? = nil
+        selected: ((UITableViewCell) -> Void)? = nil
     ) {
-        selectedCell = selected?()
+        selectedCell = selected
         cellClass = Cell.self
         self.reuseIdentifier = reuseIdentifier
         
