@@ -38,8 +38,6 @@
 		4BA368E3287044B100D2256D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA368E2287044B100D2256D /* AppDelegate.swift */; };
 		4BA368EC287044B400D2256D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA368EB287044B400D2256D /* Assets.xcassets */; };
 		4BA368EF287044B400D2256D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA368ED287044B400D2256D /* LaunchScreen.storyboard */; };
-		A87675932881411000A2DF83 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87675922881411000A2DF83 /* Protocols.swift */; };
-		CAEB4F10203700F307F0494C /* Pods_proto_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E2635AB051C5E56C03F078 /* Pods_proto_ios.framework */; };
 		771FD2D3CE5DC57F193786EE /* Pods_proto_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD6216D6383639D6958B61E /* Pods_proto_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,9 +79,6 @@
 		4BA368E2287044B100D2256D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BA368EB287044B400D2256D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BA368F0287044B400D2256D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6D83E40919574B7FCC48710E /* Pods-proto-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proto-ios.debug.xcconfig"; path = "Target Support Files/Pods-proto-ios/Pods-proto-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		A87675922881411000A2DF83 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		D1E2635AB051C5E56C03F078 /* Pods_proto_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_proto_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD6216D6383639D6958B61E /* Pods_proto_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_proto_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -178,7 +173,6 @@
 				4B8BECED2871F54F0081CAFF /* TableViewDataProvider.swift */,
 				4B8BECF12871F88B0081CAFF /* CellDescriptor.swift */,
 				4B8BECF32871F8930081CAFF /* SectionDescriptor.swift */,
-				A87675922881411000A2DF83 /* Protocols.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -448,8 +442,6 @@
 				4B8BECF42871F8930081CAFF /* SectionDescriptor.swift in Sources */,
 				4B0A08B3287F73EC0049B717 /* Module.swift in Sources */,
 				4B8BEC9C2870A5B10081CAFF /* Colors.swift in Sources */,
-				4B8BECD22870DECB0081CAFF /* ScreenTransition.swift in Sources */,
-				A87675932881411000A2DF83 /* Protocols.swift in Sources */,
 				4B8BECEE2871F54F0081CAFF /* TableViewDataProvider.swift in Sources */,
 				4B8BECDC2870E1BD0081CAFF /* Typealias.swift in Sources */,
 				4B8BECEB2871F47A0081CAFF /* UIView+Extensions.swift in Sources */,
