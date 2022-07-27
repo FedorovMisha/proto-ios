@@ -16,6 +16,8 @@
 		4B0A08BA287F7D530049B717 /* StartProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0A08B9287F7D530049B717 /* StartProtocols.swift */; };
 		4B0A08BC287F7D600049B717 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0A08BB287F7D600049B717 /* StartViewController.swift */; };
 		4B0A08BE287F7D6A0049B717 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0A08BD287F7D6A0049B717 /* StartViewModel.swift */; };
+		4B3CEF882891A9C800C629CF /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3CEF872891A9C800C629CF /* Styles.swift */; };
+		4B3CEF8C2891AE0E00C629CF /* BaseStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3CEF8B2891AE0E00C629CF /* BaseStyles.swift */; };
 		4B8BEC8D287064AD0081CAFF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B8BEC8F287064AD0081CAFF /* Localizable.strings */; };
 		4B8BEC93287064D60081CAFF /* UIColor.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 4B8BEC91287064D60081CAFF /* UIColor.stencil */; };
 		4B8BEC94287064D60081CAFF /* UIImage.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 4B8BEC92287064D60081CAFF /* UIImage.stencil */; };
@@ -53,6 +55,8 @@
 		4B0A08B9287F7D530049B717 /* StartProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartProtocols.swift; sourceTree = "<group>"; };
 		4B0A08BB287F7D600049B717 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		4B0A08BD287F7D6A0049B717 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		4B3CEF872891A9C800C629CF /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		4B3CEF8B2891AE0E00C629CF /* BaseStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStyles.swift; sourceTree = "<group>"; };
 		4B8BEC8B287064960081CAFF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B8BEC8C287064A10081CAFF /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B8BEC8E287064AD0081CAFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -146,8 +150,25 @@
 				4BDC878128704AB1001F7F04 /* Base */,
 				4BDC878028704A9A001F7F04 /* Extensions */,
 				4BDC877F28704A95001F7F04 /* Components */,
+				4B3CEF892891ADF800C629CF /* Styles */,
 			);
 			path = System;
+			sourceTree = "<group>";
+		};
+		4B3CEF862891A9BB00C629CF /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				4B3CEF872891A9C800C629CF /* Styles.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		4B3CEF892891ADF800C629CF /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				4B3CEF8B2891AE0E00C629CF /* BaseStyles.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 		4B8BEC862870642A0081CAFF /* SwiftGenTemplates */ = {
@@ -230,6 +251,7 @@
 		4BDC878128704AB1001F7F04 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				4B3CEF862891A9BB00C629CF /* Styles */,
 				4B144EF7287F044E002248DF /* ModuleCore */,
 				4B8BECEC2871F5440081CAFF /* TableView */,
 				4B8BECDB2870E1BD0081CAFF /* Typealias.swift */,
@@ -430,6 +452,7 @@
 				4B8BECE92871F39E0081CAFF /* ViewController.swift in Sources */,
 				4B8BECC42870BF770081CAFF /* View.swift in Sources */,
 				4B8BECF62871FC410081CAFF /* TableViewDataProvider+UITableViewDelegate.swift in Sources */,
+				4B3CEF882891A9C800C629CF /* Styles.swift in Sources */,
 				4B8BEC9A2870A5AC0081CAFF /* Localizable.swift in Sources */,
 				4B0A08B1287F73910049B717 /* TargetView.swift in Sources */,
 				4B0A08BC287F7D600049B717 /* StartViewController.swift in Sources */,
@@ -444,6 +467,7 @@
 				4B8BEC9C2870A5B10081CAFF /* Colors.swift in Sources */,
 				4B8BECEE2871F54F0081CAFF /* TableViewDataProvider.swift in Sources */,
 				4B8BECDC2870E1BD0081CAFF /* Typealias.swift in Sources */,
+				4B3CEF8C2891AE0E00C629CF /* BaseStyles.swift in Sources */,
 				4B8BECEB2871F47A0081CAFF /* UIView+Extensions.swift in Sources */,
 				4B0A08B8287F7D4E0049B717 /* Example_StartModule.swift in Sources */,
 				4B0A08AD287F72F80049B717 /* ViewModelCore.swift in Sources */,
