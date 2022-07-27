@@ -19,7 +19,7 @@ class SectionDescriptor {
         self.footerView = nil
     }
     
-    convenience init<H: UIView, F: UIView>(
+    init<H: UIView, F: UIView>(
         rows: [CellDescriptor],
         headerView: (() -> (H))? = nil,
         footerView: (() -> (F))? = nil
