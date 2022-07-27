@@ -5,13 +5,27 @@
 //  Created by Misha Fedorov on 03.07.2022.
 //
 
-import Foundation
+import UIKit
 
 class SectionDescriptor {
     
     var rows: [CellDescriptor]
+    var headerView: UIView?
+    var footerView: UIView?
     
-    init(rows: [CellDescriptor]) {
+    init(rows: [CellDescriptor])    {
         self.rows = rows
+        self.headerView = nil
+        self.footerView = nil
+    }
+    
+    convenience init<H: UIView, F: UIView>(
+        rows: [CellDescriptor],
+        headerView: (() -> (H))? = nil,
+        footerView: (() -> (F))? = nil
+    )   {
+        self.rows = rows
+        self.headerView = headerView?()
+        self.footerView = footerView?()
     }
 }

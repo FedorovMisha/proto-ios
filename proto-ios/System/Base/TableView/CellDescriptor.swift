@@ -11,18 +11,22 @@ class CellDescriptor {
     var cellClass: UITableViewCell.Type
     var reuseIdentifier: String
     var configuration: (UITableViewCell) -> Void
+    var didSelectCell: ((UITableViewCell) -> Void)?
     
     init<Cell: UITableViewCell>(
         configuration: @escaping (Cell) -> Void,
         isVisable: Bool = true,
-        reuseIdentifier: String = String(describing: type(of: Cell.self))
+        reuseIdentifier: String = String(describing: type(of: Cell.self)),
+        selected: ((UITableViewCell) -> Void)? = nil
     ) {
+        didSelectCell = selected
         cellClass = Cell.self
         self.reuseIdentifier = reuseIdentifier
         
         self.configuration = {
-            
             configuration($0 as! Cell)
         }
     }
 }
+
+
