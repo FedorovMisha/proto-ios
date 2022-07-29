@@ -7,7 +7,9 @@
 
 import RxSwift
 
-struct Example_StartViewModel: ViewModel, Example_StartViewModelProtocol {
+struct Example_StartViewModel: ViewModel, Example_StartViewModelProtocol, CoordinatorContainer {
  
     var name: Observable<String> = Observable<String>.of("Dima")
+    
+    var coordinator: Example_Coord?
 }
