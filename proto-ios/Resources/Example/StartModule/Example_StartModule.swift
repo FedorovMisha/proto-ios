@@ -19,6 +19,9 @@ struct Example_StartModule: Module {
             return Example_StartViewController()
         } viewModelProvider: {
             return Example_StartViewModel()
+        } coordinatorProvider: {
+            
+            return Example_Coord()
         }
     }
 }

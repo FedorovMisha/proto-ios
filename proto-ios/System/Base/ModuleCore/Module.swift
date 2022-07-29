@@ -20,13 +20,22 @@ protocol Module {
 extension Module {
     func construct<
         V: BaseView,
-        T: ViewModel
+        T: ViewModel & CoordinatorContainer,
+        C: Coordinator
     >(
         viewProvider: () -> V,
-        viewModelProvider: () -> T
+        viewModelProvider: () -> T,
+        coordinatorProvider: () -> C?
     ) -> V {
         var view = viewProvider()
-        let viewModel = viewModelProvider()
+        var viewModel = viewModelProvider()
+        let coordinator = coordinatorProvider()
+        
+        guard let coordinator = coordinator as? T.TCoordinator else {
+            fatalError("[coordinato].Type != \(T.TCoordinator.self)")
+        }
+        
+        viewModel.coordinator = coordinator
         
         guard let viewModel = viewModel as? V.TViewModel else {
             fatalError("[viewModel].Type != \(V.TViewModel.self)")
